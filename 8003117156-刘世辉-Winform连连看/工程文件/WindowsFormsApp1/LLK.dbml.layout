@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LLK">
+  <DataContextMoniker Name="/LLKDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c6f2ae15-8e34-4c0b-8001-532c6ac9af49" absoluteBounds="1.875, 2.25, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/LLKDataContext/games" />
+      <nestedChildShapes>
+        <elementListCompartment Id="378e97c6-e931-4c9f-91c7-2957b9c799bd" absoluteBounds="1.8900000000000001, 2.71, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87a18d88-dffe-4b31-9de4-fae7a5d4fdcd" absoluteBounds="5.375, 2.125, 2, 1.7220992024739581">
+      <DataClassMoniker Name="/LLKDataContext/users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8137b41-1602-47cf-b6e1-449eefbee9b4" absoluteBounds="5.39, 2.585, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 3.01865254720052); (3.875 : 3.01865254720052)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LLKDataContext/users/users_games" />
+      <nodes>
+        <classShapeMoniker Id="87a18d88-dffe-4b31-9de4-fae7a5d4fdcd" />
+        <classShapeMoniker Id="c6f2ae15-8e34-4c0b-8001-532c6ac9af49" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_llk" Class="LLKDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=L273\SQLEXPRESS;Initial Catalog=db_llk;User ID=sa;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="db_llkConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.games" Member="games">
+    <Type Name="games">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="模式" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="邮箱" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="分数" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="users_games" Member="users" ThisKey="邮箱" OtherKey="邮箱" Type="users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="users">
+      <Column Name="邮箱" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="用户名" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="最高分" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="密码" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="盘数" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="users_games" Member="games" ThisKey="邮箱" OtherKey="邮箱" Type="games" />
+    </Type>
+  </Table>
+</Database>
